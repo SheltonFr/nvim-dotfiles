@@ -44,30 +44,14 @@ function M.config()
 
   require("lualine").setup {
     options = {
-      -- component_separators = { left = "", right = "" },
-      -- section_separators = { left = "", right = "" },
-      -- component_separators = { left = "", right = "" },
-      -- section_separators = { left = "", right = "" },
       component_separators = { left = "", right = "" },
-      section_separators = { left = "", right = "" },
-
-      ignore_focus = { "NvimTree" },
+      section_separators = { left = '', right = '' },
+      ignore_focus = { "NvimTree", "alpha", "toggleterm", "packer" },
     },
     sections = {
-      -- lualine_a = { {"branch", icon =""} },
-      -- lualine_b = { diff },
-      -- lualine_c = { "diagnostics" },
-      -- lualine_x = { copilot },
-      -- lualine_y = { "filetype" },
-      -- lualine_z = { "progress" },
-      -- lualine_a = { "mode" },
-      lualine_a = {},
-      lualine_b = { "branch" },
-      lualine_c = { diagnostics },
-      -- lualine_x = { diff, "copilot", filetype },
-      lualine_x = { "copilot", filetype },
-      lualine_y = { "progress" },
-      lualine_z = {},
+      lualine_a = { { "mode", icons_enabled = true, icon = "" } },
+      lualine_b = { { "branch", icon = "" }, "diffs" },
+      lualine_z = { { "progress", icons_enabled = true, icon = "" } }
     },
     -- extensions = { "quickfix", "man", "fugitive", "oil" },
     extensions = { "quickfix", "man", "fugitive" },
